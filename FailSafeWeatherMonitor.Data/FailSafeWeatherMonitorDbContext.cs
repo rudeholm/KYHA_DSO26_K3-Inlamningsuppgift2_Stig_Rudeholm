@@ -21,7 +21,7 @@ public class FailSafeWeatherMonitorDbContext : DbContext
         {
             optionsBuilder.UseSqlServer(
                 @"Server=(localdb)\MSSQLLocalDB;"
-                + "Database=FailSafeWeatherMonitor;"
+                + "Database=xxxFailSafeWeatherMonitor;"
                 + "Trusted_Connection=True;"
                 + "TrustServerCertificate=True;"
             );

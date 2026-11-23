@@ -5,6 +5,7 @@
     <TargetFramework>net11.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <UserSecretsId>37e4d3be-9fa2-4c27-8d22-7d040dd5d625</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +17,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="11.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="11.0.0" />
   </ItemGroup>
 
   <ItemGroup>
