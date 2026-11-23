@@ -7,6 +7,14 @@ public class FailSafeWeatherMonitorDbContext : DbContext
 {
     public DbSet<WeatherDataPoint> WeatherDataPoints { get; set; } = null!;
 
+    public FailSafeWeatherMonitorDbContext()
+    {
+    }
+
+    public FailSafeWeatherMonitorDbContext(DbContextOptions<FailSafeWeatherMonitorDbContext> options) : base(options)
+    {
+    }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)

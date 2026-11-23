@@ -1,0 +1,38 @@
+using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace FailSafeWeatherMonitor.Data.Migrations;
+
+/// <inheritdoc />
+public partial class _20261123205603_InitialCreate : Migration
+{
+    /// <inheritdoc />
+    protected override void Up(MigrationBuilder migrationBuilder)
+    {
+        migrationBuilder.CreateTable(
+            name: "WeatherDataPoints",
+            columns: table => new
+            {
+                Id = table.Column<int>(type: "int", nullable: false)
+                    .Annotation("SqlServer:Identity", "1, 1"),
+                StationName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                Timestamp = table.Column<DateTime>(type: "datetime2", nullable: false),
+                Temperature = table.Column<double>(type: "float", nullable: false),
+                Humidity = table.Column<double>(type: "float", nullable: false),
+                DataSource = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false)
+            },
+            constraints: table =>
+            {
+                table.PrimaryKey("PK_WeatherDataPoints", x => x.Id);
+            });
+    }
+
+    /// <inheritdoc />
+    protected override void Down(MigrationBuilder migrationBuilder)
+    {
+        migrationBuilder.DropTable(
+            name: "WeatherDataPoints");
+    }
+}
