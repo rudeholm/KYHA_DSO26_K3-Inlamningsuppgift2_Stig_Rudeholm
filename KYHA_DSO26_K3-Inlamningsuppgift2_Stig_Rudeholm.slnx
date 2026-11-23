@@ -1,3 +1,5 @@
 <Solution>
   <Project Path="FailSafeWeatherMonitor.ConsoleApp/FailSafeWeatherMonitor.ConsoleApp.csproj" />
+  <Project Path="FailSafeWeatherMonitor.Core/FailSafeWeatherMonitor.Core.csproj" />
+  <Project Path="FailSafeWeatherMonitor.Data/FailSafeWeatherMonitor.Data.csproj" />
 </Solution>

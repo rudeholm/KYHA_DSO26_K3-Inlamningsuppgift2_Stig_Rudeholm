@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FailSafeWeatherMonitor.Core\FailSafeWeatherMonitor.Core.csproj" />
+    <ProjectReference Include="..\FailSafeWeatherMonitor.Data\FailSafeWeatherMonitor.Data.csproj" />
+  </ItemGroup>
+
 </Project>
