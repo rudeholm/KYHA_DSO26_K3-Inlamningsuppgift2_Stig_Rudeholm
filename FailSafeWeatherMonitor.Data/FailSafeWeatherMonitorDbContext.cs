@@ -21,12 +21,18 @@ public class FailSafeWeatherMonitorDbContext : DbContext
         {
             optionsBuilder.UseSqlServer(
                 @"Server=(localdb)\MSSQLLocalDB;"
-                + "Database=xxxFailSafeWeatherMonitor;"
+                + "Database=FailSafeWeatherMonitor;"
                 + "Trusted_Connection=True;"
                 + "TrustServerCertificate=True;"
             );
         }
     }
 
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<WeatherDataPoint>()
+            .HasIndex(d => new { d.StationName, d.Timestamp })
+            .IsUnique();
+    }
 }
 

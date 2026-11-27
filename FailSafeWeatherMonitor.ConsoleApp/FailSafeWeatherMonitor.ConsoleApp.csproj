@@ -24,7 +24,12 @@
   <ItemGroup>
     <ProjectReference Include="..\FailSafeWeatherMonitor.Core\FailSafeWeatherMonitor.Core.csproj" />
     <ProjectReference Include="..\FailSafeWeatherMonitor.Data\FailSafeWeatherMonitor.Data.csproj" />
-    <ProjectReference Include="..\FailSafeWeatherMonitor.UI\FailSafeWeatherMonitor.UI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="weather_data.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
